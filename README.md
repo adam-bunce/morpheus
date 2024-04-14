@@ -1,4 +1,6 @@
 # Morpheus
+![coverage](https://img.shields.io/badge/coverage-no_clue-darkred) ![bugs](https://img.shields.io/badge/bugs-a_lot-darkgreen)
+
 Simple programming language with janky constraint based layout system
 
 ### Features
