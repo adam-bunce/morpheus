@@ -1,0 +1,14 @@
+n = 10;
+
+last_last = 0;
+last = 1;
+fib = 0;
+
+for i in (0, n, 1) {
+	fib = last_last + last;
+
+	last = last_last;
+	last_last = fib;
+}
+
+print(fib);

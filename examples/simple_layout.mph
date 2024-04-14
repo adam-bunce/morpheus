@@ -1,0 +1,9 @@
+a = Box("box a");
+b = Box("box b");
+
+g = Group([a, b] : [
+    *a is below *b,
+    *b is right of *a
+]);
+
+g.htmlify("output_file_name"); // save as output_file_name.html
