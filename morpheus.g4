@@ -104,7 +104,7 @@ argList returns [[]backend.Expression expressionList]
     :
     { var exprs []backend.Expression }
       (e1=expr        { exprs = append(exprs, $e1.expression) }
-      (COMMA e2=expr { exprs = append(exprs, $e2.expression) } ))*
+      (COMMA e2=expr { exprs = append(exprs, $e2.expression) } )*)?
      { $expressionList = exprs }
     ;
 

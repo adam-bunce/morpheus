@@ -1,0 +1,34 @@
+function even() {
+	a = Box("box1");
+	b = Box("box2");
+
+	Group([a, b] : [*a is below *b, *a is right of *b])
+}
+
+function odd() {
+	c = Box("box3");
+	d = Box("box4");
+
+	Group([c, d] : [*d is below *c, *c is right of *d])
+}
+
+group = even()
+
+counter = 0
+for i in (0, 30, 1) {
+
+    new_group = even();
+    if (counter == 5) {
+        counter = 0;
+        new_group = odd();
+    }
+        group = Group([group, new_group] : [
+            *new_group is right of *group,
+            *new_group is below  *group
+        ])
+
+    counter = counter + 1
+}
+
+
+group.htmlify("out");

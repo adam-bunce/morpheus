@@ -1,0 +1,12 @@
+number = 30;
+
+if (number < 0) {
+    print("very small")
+} elif (number < 10)  {
+    print("small");
+} elif (number < 100 ) {
+    print("medium");
+} else {
+    print("big");
+}
+// outputs medium
